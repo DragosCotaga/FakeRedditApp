@@ -1,6 +1,6 @@
 ﻿namespace FakeRedditApp.Data.Models
 {
-    public class Subforum
+    public class SubForum
     {
         public string Id { get; set; }
         public string Name { get; set; }
