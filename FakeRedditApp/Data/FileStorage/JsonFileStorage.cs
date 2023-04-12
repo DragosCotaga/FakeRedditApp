@@ -26,8 +26,9 @@ namespace FakeRedditApp.Data.FileStorage
 
         public void WriteToFile(List<T> data)
         {
-            string jsonData = JsonConvert.SerializeObject(data, (Newtonsoft.Json.Formatting)Formatting.Indented);
+            string jsonData = JsonConvert.SerializeObject(data, Newtonsoft.Json.Formatting.Indented);
             File.WriteAllText(_filePath, jsonData);
         }
+
     }
 }
