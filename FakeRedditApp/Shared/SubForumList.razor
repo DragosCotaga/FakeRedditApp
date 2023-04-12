@@ -1,0 +1,20 @@
+﻿@using FakeRedditApp.Services
+@using FakeRedditApp.Data.Models
+@inject SubForumService SubForumService
+
+@if (SubForums != null)
+{
+    <div class="subforum-list">
+        @foreach (var subForum in SubForums)
+        {
+            <div class="subforum">
+                <h4>@subForum.Name</h4>
+                <small>Created by: @subForum.OwnerUserId</small>
+            </div>
+        }
+    </div>
+}
+
+@code {
+    [Parameter] public List<SubForum> SubForums { get; set; }
+}

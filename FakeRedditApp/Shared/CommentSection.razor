@@ -1,0 +1,20 @@
+﻿@using FakeRedditApp.Services
+@using FakeRedditApp.Data.Models
+@inject CommentService CommentService
+
+@if (Comments != null)
+{
+    <div class="comment-section">
+        @foreach (var comment in Comments)
+        {
+            <div class="comment">
+                <p>@comment.Content</p>
+                <small>By @comment.UserId</small>
+            </div>
+        }
+    </div>
+}
+
+@code {
+    [Parameter] public List<Comment> Comments { get; set; }
+}

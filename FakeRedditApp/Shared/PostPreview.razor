@@ -1,0 +1,10 @@
+﻿@using FakeRedditApp.Data.Models
+<div class="post-preview">
+    <h3>@Post.Title</h3>
+    <p>Posted by: @Post.UserId</p>
+    <a href="post/@Post.Id">View Post</a>
+</div>
+
+@code {
+    [Parameter] public Post Post { get; set; }
+}
